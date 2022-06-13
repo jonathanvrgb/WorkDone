@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             x:Class="WorkDone.MainPage">
+
+    <ScrollView Orientation="Vertical" Padding="10" BackgroundColor="#E9EDDE">
+
+        <StackLayout BackgroundColor="#E9EDDE">
+
+            <Image Source="logo2.png" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+
+            <Entry x:Name="nome" Placeholder="Qual é o seu email?" TextColor="#3D3B30"></Entry>
+
+            <Entry x:Name="escola" Placeholder="Qual é o seu WhatsApp? DDD+Número" TextColor="#3D3B30"></Entry>
+
+            <Entry TextChanged="trabalho_TextChanged" x:Name="trabalho" Placeholder="Tema do trabalho escolar" TextColor="#3D3B30"></Entry>
+            <Label x:Name="ttrabalho2" Text="Ex: Segunda guerra mundial" TextColor="#3D3B30"></Label>
+
+            <!--<Entry x:Name="subtitulo" Placeholder="Subtítulo para o trabalho" TextColor="#3D3B30"></Entry>
+
+            <Entry x:Name="turma" Placeholder="Curso/Turma/Série" TextColor="#3D3B30"></Entry>-->
+
+            <Label x:Name="status" Text="" TextColor="#3D3B30" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+            <Button Clicked="btnDoMyWork_Clicked" x:Name="btnDoMyWork" Text="Faça o meu trabalho!" BackgroundColor="#3D3B30" TextColor="GhostWhite" BorderColor="GhostWhite" BorderWidth="1" CornerRadius="15"></Button>
+
+
+            <controls:MTAdView PersonalizedAds="true" AdsId="--YOUR ADMOB ID--"/>
+
+            <Editor x:Name="txtHomeWork" Placeholder="" PlaceholderColor="Black"  BackgroundColor="White" AutoSize="TextChanges" IsVisible="false"/>
+            
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>
